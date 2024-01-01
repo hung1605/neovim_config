@@ -1,15 +1,15 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-
-require("vim-options")
-require("lazy").setup("plugins")
+require("Hungrycode.plugins-setup")
+require("Hungrycode.core.options")
+require("Hungrycode.core.keymaps")
+require("Hungrycode.core.colorscheme")
+require("Hungrycode.plugins.comment")
+require("Hungrycode.plugins.nvim-tree")
+require("Hungrycode.plugins.lualine")
+require("Hungrycode.plugins.telescope")
+require("Hungrycode.plugins.nvim-cmp")
+require("Hungrycode.plugins.lsp.mason")
+require("Hungrycode.plugins.lsp.lspsaga")
+require("Hungrycode.plugins.lsp.lspconfig")
+require("Hungrycode.plugins.lsp.null-ls")
+require("Hungrycode.plugins.autopairs")
+require("Hungrycode.plugins.treesitter")
