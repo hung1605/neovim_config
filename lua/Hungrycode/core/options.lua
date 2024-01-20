@@ -2,7 +2,7 @@ local opt = vim.opt -- for conciseness
 
 -- line numbers
 opt.relativenumber = true
-opt.number = true
+opt.number = false
 
 -- tab & indenting
 opt.tabstop = 2
@@ -18,7 +18,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- cursor line
---opt.cursorline = true 
+--opt.cursorline = true
 
 -- appearance
 --opt.termguicolors = true
